@@ -14,6 +14,7 @@
     "@tsparticles/basic": "^3.0.2",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.0.2",
+    "npm-check-updates": "^16.14.12",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tsparticles": "^3.0.2"
@@ -24,6 +25,7 @@
     "@typescript-eslint/eslint-plugin": "^6.14.0",
     "@typescript-eslint/parser": "^6.14.0",
     "@vitejs/plugin-react-swc": "^3.5.0",
+    "dotenv": "^16.3.1",
     "eslint": "^8.55.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",

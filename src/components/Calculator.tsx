@@ -2,6 +2,9 @@ import "../css/calculator.css";
 import CalculatorInput from "./calculatorComponents/CalculatorInput";
 import CalculatorOutput from "./calculatorComponents/CalculatorOutput";
 import { useEffect, useState } from "react";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 type onFormSubmitType = (formData: string) => void;
 
@@ -27,6 +30,8 @@ type FormDataType = {
 export default function Calculator({problemType}: {problemType: string}){
 
   const [calculations, setCalculations] = useState<Output | null>(null);
+
+  const API_LINK: string = import.meta.env.API_LINK;
 
   useEffect(() => {
     cleanUp();
@@ -59,7 +64,7 @@ export default function Calculator({problemType}: {problemType: string}){
         body: JSONFormData
       }
 
-      const calculations = await fetch("http://localhost:8080/calculate", options);
+      const calculations = await fetch(API_LINK, options);
 
       const readableCalculations = await calculations.json();
 
