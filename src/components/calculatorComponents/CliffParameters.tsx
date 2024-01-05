@@ -1,6 +1,6 @@
 import "../../css/calculator.css";
-import {useForm, SubmitHandler} from "react-hook-form";
-import { ChangeEvent, useEffect, useState } from "react";
+import {useForm,} from "react-hook-form";
+import { useEffect, useState } from "react";
 
 import {useDebounce} from "usehooks-ts";
 

@@ -2,11 +2,6 @@ import "../css/calculator.css";
 import CalculatorInput from "./calculatorComponents/CalculatorInput";
 import CalculatorOutput from "./calculatorComponents/CalculatorOutput";
 import { useEffect, useState } from "react";
-import dotenv from "dotenv";
-
-dotenv.config();
-
-type onFormSubmitType = (formData: string) => void;
 
 interface Output {
   initialHorizontalVelocity?: number;
@@ -31,7 +26,7 @@ export default function Calculator({problemType}: {problemType: string}){
 
   const [calculations, setCalculations] = useState<Output | null>(null);
 
-  const API_LINK: string = process.env.REACT_APP_BUILD_ENV || import.meta.env.REACT_APP_BUILD_ENV;
+  const API_LINK: string = import.meta.env.VITE_APP_BUILD_ENV;
 
   useEffect(() => {
     cleanUp();
