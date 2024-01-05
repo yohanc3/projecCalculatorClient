@@ -8,7 +8,6 @@ export default function App(){
   
   function scrollDown(id: string){
     document.getElementById(id)?.scrollIntoView();
-
   }
 
   return (
