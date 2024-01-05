@@ -31,7 +31,7 @@ export default function Calculator({problemType}: {problemType: string}){
 
   const [calculations, setCalculations] = useState<Output | null>(null);
 
-  const API_LINK: string = import.meta.env.API_LINK;
+  const API_LINK: string = process.env.REACT_APP_BUILD_ENV || import.meta.env.REACT_APP_BUILD_ENV;
 
   useEffect(() => {
     cleanUp();
