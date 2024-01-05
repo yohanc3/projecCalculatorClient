@@ -1,0 +1,16 @@
+.spacer{
+  /* border: 1px solid greenyellow; */
+  aspect-ratio: 900/70;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.layer4{
+  background-image: url("../../resources/layer4.svg");
+}
+
+.layer5{
+  background-image: url("../../resources/layer5.svg");
+}

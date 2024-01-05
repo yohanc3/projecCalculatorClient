@@ -1,0 +1,223 @@
+.calculator-section{
+  /* border: 1px solid white; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.calculator-wrapper{
+  height: 90%;
+  width: 90%;
+  /* border: 2px solid rgb(54, 123, 36); */
+}
+
+
+.problem-type-buttons{
+  border: 4px solid #176753;
+  border-radius: 2rem;
+  height: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.button-wrapper{
+ display: flex;
+ height: 100%;
+ width: 7rem;
+ display: flex;
+ align-items: center;
+ transition: 0.2s ease-in;;
+ /* border: 1px solid yellow; */
+}
+
+.problem-type-buttons button{
+  color: white;
+  font-size: 1rem;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.problem-type-cliff.clicked,
+.problem-type-golf.clicked,
+.problem-type-table.clicked{
+  background-color: #009e77;
+  color: white;
+}
+
+
+.problem-type-golf,
+.problem-type-table{
+
+  border-right: 3px solid #176753;
+  border-left: none;
+  border-top: none;
+  border-bottom: none;
+}
+
+.problem-type-golf{
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+
+.problem-type-cliff{
+  border-bottom: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+.problem-type-buttons-wrapper{
+  /* border: 1px solid white; */
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator{
+  height: 89%;
+  width: 100%;
+  display: flex;
+  /* border: 4px solid rgb(220, 146, 146); */
+  justify-content: space-between ;
+}
+
+.calculator-input,
+.calculator-output{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 45%;
+  /* border: 1px solid green; */
+  justify-content: center;
+}
+
+.calculator-input-wrapper,
+.calculator-output-wrapper,
+.calculator-input-form
+{
+  /* border: 1px solid blue; */
+  height: 80%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.calculator-parameter{
+  /* border: 1px solid yellow; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #009e77;
+}
+
+.calculator-parameter-wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 10%;
+  /* border: 4px solid gray; */
+}
+
+.calculator-parameter-label-input{
+  display: flex;
+  /* border: 2px solid blue; */
+  height: 100%;
+  align-items: center;
+  flex: 1;
+}
+
+.calculator-parameter-label{
+  /* border: 1px solid red; */
+  width: 25%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.calculator-parameter-input{
+  /* border: 1px solid green; */
+  background: none;
+  color: white;
+  height: 100%;
+  outline: none;
+  width: 70%;
+  font-size: 1.5rem;
+  text-align: right;
+  border: none;
+
+}
+
+
+
+.calculator-parameter-type-wrapper{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 25%;
+  padding-left: 1rem;
+    /* border: 1px solid white; */
+}
+
+.calculator-parameter-type-wrapper select {
+  outline: none;
+  background: none;
+  border: none;
+  color: white;
+}
+
+.calculator-parameter-input::-webkit-inner-spin-button,
+.calculator-parameter-input::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.calculator-parameter-input input[type="number"]{
+  -moz-appearance: textfield;
+}
+
+.calculator-output-parameter-wrapper{
+  /* border: 1px solid red; */
+  border-bottom: 1px solid #009e77;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+}
+
+.calculator-output-title{
+  font-size: .8rem;
+  font-weight: 400;
+  /* color: rgb(202, 202, 202); */
+}
+
+.calculator-output-parameter{
+  font-size: 1.5rem;
+  font-size: 700;
+  height: 2rem;
+}
+
+.calculator-input-form{
+  display: flex;
+  height: 100%;
+  width: 100%;
+
+}
+
+.parameter-error{
+  font: 0.5rem;
+  color: rgb(195, 51, 51);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
