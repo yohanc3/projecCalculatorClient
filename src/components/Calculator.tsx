@@ -49,6 +49,7 @@ export default function Calculator({problemType}: {problemType: string}){
         ...formData, 
         problemType: problemType,
       }
+
       const JSONFormData = JSON.stringify(finalFormData);
       const options = {
         method: "POST",

@@ -32,7 +32,9 @@ export default function GolfBallParameters({onFormSubmit, cleanUp}: {onFormSubmi
   const debouncedForm = useDebounce(formData, 700);
 
   useEffect(() => {
+    console.log("FIRED");
     if(isFormDataValid(formData)){
+      console.log("FIRED IF");
       onFormSubmit(formData);
     }
   }, [debouncedForm])
@@ -42,9 +44,8 @@ export default function GolfBallParameters({onFormSubmit, cleanUp}: {onFormSubmi
   }
 
   function handleFormSubmit(formInputs: FormDataType){
-
+    console.log(formInputs);
     const isFormErrorsClean = autoSetFormErrors(formInputs);
-
     if(isFormErrorsClean){
       setFormData(formInputs);
     } else {
@@ -70,7 +71,6 @@ export default function GolfBallParameters({onFormSubmit, cleanUp}: {onFormSubmi
             <div className="calculator-parameter-label">
               Angle
             </div>
-            
           <div className="calculator-parameter-label-input">
             <input type="number" className="calculator-parameter-input" {...register("angle")}/>
             <div className="calculator-parameter-type-wrapper">
@@ -91,7 +91,6 @@ export default function GolfBallParameters({onFormSubmit, cleanUp}: {onFormSubmi
             </div>
             <div className="calculator-parameter-label-input">
               <input type="number" className="calculator-parameter-input" {...register("initialSpeed")}/>
-             
               <div className="calculator-parameter-type-wrapper">
                 <select name="parameter-type">
                   <option value="m/s" title="m/s">m/s</option>
@@ -110,7 +109,6 @@ export default function GolfBallParameters({onFormSubmit, cleanUp}: {onFormSubmi
             </div>
             <div className="calculator-parameter-label-input">
               <input type="number" className="calculator-parameter-input" {...register("height")}/>
-             
               <div className="calculator-parameter-type-wrapper">
                 <select name="parameter-type">
                   <option value="m" title="m">m</option>
