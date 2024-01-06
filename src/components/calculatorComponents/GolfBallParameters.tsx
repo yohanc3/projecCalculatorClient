@@ -57,9 +57,6 @@ export default function GolfBallParameters({onFormSubmit, cleanUp}: {onFormSubmi
   function autoSetFormErrors(formInputs: FormDataType){
     const newFormErrors: FormErrorsType = {angle: !!formInputs.angle, initialSpeed: !!formInputs.initialSpeed};
     setFormErrors(newFormErrors);
-    // console.log("formInputs: ", formInputs)
-    // console.log("newFormErrors: ",  newFormErrors);
-    // console.log("are there not errors?: ", !Object.values(newFormErrors).some((error) => (!!error) === false));
     return !Object.values(newFormErrors).some((error) => (!!error) === false)
   }
 

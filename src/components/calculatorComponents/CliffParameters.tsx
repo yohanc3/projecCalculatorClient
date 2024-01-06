@@ -58,9 +58,6 @@ export default function GolfBallParameters({onFormSubmit, cleanUp}: {onFormSubmi
   function autoSetFormErrors(formInputs: FormDataType){
     const newFormErrors: FormErrorsType = {angle: !!formInputs.angle, initialSpeed: !!formInputs.initialSpeed, height: !!formInputs.height}
     setFormErrors(newFormErrors);
-    // console.log("formInputs: ", formInputs)
-    // console.log("newFormErrors: ",  newFormErrors);
-    // console.log("are there not errors?: ", !Object.values(newFormErrors).some((error) => (!!error) === false));
     return !Object.values(newFormErrors).some((error) => (!!error) === false)
   }
 
@@ -106,7 +103,7 @@ export default function GolfBallParameters({onFormSubmit, cleanUp}: {onFormSubmi
         </div>
 
         <div className="calculator-parameter-wrapper">
-          {(!formErrors.initialSpeed) && <span className="parameter-error">This is a required parameter</span>}
+          {(!formErrors.height) && <span className="parameter-error">This is a required parameter</span>}
           <div className="calculator-parameter">
             <div className="calculator-parameter-label">
                Height

@@ -26,7 +26,7 @@ export default function Calculator({problemType}: {problemType: string}){
 
   const [calculations, setCalculations] = useState<Output | null>(null);
 
-  const API_LINK: string = import.meta.env.VITE_APP_BUILD_ENV;
+  const VITE_APP_BUILD_ENV: string = import.meta.env.VITE_APP_BUILD_ENV;
 
   useEffect(() => {
     cleanUp();
@@ -49,7 +49,6 @@ export default function Calculator({problemType}: {problemType: string}){
         ...formData, 
         problemType: problemType,
       }
-      console.log("FINAL FORM DATA: ", finalFormData)
       const JSONFormData = JSON.stringify(finalFormData);
       const options = {
         method: "POST",
@@ -59,7 +58,7 @@ export default function Calculator({problemType}: {problemType: string}){
         body: JSONFormData
       }
 
-      const calculations = await fetch(API_LINK, options);
+      const calculations = await fetch(VITE_APP_BUILD_ENV, options);
 
       const readableCalculations = await calculations.json();
 

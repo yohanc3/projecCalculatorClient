@@ -16,7 +16,6 @@ interface Output {
 
 export default function CalculatorOutput({calculations, problemType}: {calculations: Output | null, problemType: string}){
 
-  console.log(calculations);
 
   return (
 
