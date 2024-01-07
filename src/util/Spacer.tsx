@@ -1,6 +1,6 @@
 import "../css/spacers.css"
 
-export default function Spacer({layer}: {layer: string}){
- return <div className={`spacer ${layer}`}></div>
+export default function Spacer(){
+ return <div className={`spacer`}></div>
 
 }

@@ -29,6 +29,12 @@ section{
   margin: none;
 }
 
+@media only screen and (max-width: 768px){
+  .navBar{
+    padding: 0.5rem 2rem;
+  }
+}
+
 .navBar-button{
   border: none;
   z-index: 2;

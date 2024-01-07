@@ -5,12 +5,5 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-
-.layer4{
-  background-image: url("../../resources/layer4.svg");
-}
-
-.layer5{
-  background-image: url("../../resources/layer5.svg");
+  background-image: url("../../resources/spacer.svg");
 }

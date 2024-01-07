@@ -2,13 +2,9 @@ import "./css/App.css";
 import FrontPage from "./components/FrontPage";
 import Spacer from "./util/Spacer";
 import CalculatorOverlay from "./components/CalculatorOverlay";
+import {scrollDown} from "./util/scrollDown";
 
 export default function App(){
-
-  
-  function scrollDown(id: string){
-    document.getElementById(id)?.scrollIntoView();
-  }
 
   return (
     <div> 
@@ -17,7 +13,7 @@ export default function App(){
         <button onClick={() => scrollDown("calculator")}className="navBar-button">Calculate</button>
       </div>
       <FrontPage/>
-      <Spacer layer="layer4"/>
+      <Spacer/>
       <CalculatorOverlay/>
     </div>
   )

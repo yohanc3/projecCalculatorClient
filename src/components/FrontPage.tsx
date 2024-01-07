@@ -1,12 +1,8 @@
 import ParticlesBackground from "../particles"
 import "../css/App.css"
-
+import {scrollDown} from "../util/scrollDown";
 
 export default function FrontPage(){
-
-  function scrollDown(id: string){
-    document.getElementById(id)?.scrollIntoView();
-  }
 
   return (
 

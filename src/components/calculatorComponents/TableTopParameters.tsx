@@ -4,23 +4,11 @@ import {useEffect, useState } from "react";
 
 import {useDebounce} from "usehooks-ts";
 
-type FormDataType = {
-  angle?: number;
-  initialSpeed?: number;
-  height?: number;
-};
-
-type FormErrorsType = {
-  height: boolean;
-  initialSpeed: boolean;
-}
-
-type cleanUp = () => void;
-
-type onFormSubmitType = (formData: FormDataType) => void;
+import type {OnFormSubmitType, CleanUp, FormDataType, FormErrorsType} from "../../Types/types"
 
 
-export default function GolfBallParameters({onFormSubmit, cleanUp}: {onFormSubmit: onFormSubmitType, cleanUp: cleanUp}){
+
+export default function GolfBallParameters({onFormSubmit, cleanUp}: {onFormSubmit: OnFormSubmitType, cleanUp: CleanUp}){
 
   const {register, handleSubmit} = useForm<FormDataType>();
 

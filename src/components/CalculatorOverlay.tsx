@@ -7,13 +7,11 @@ export default function CalculatorOverlay(){
 
   const [currentBtnClicked, setCurrentButtonClicked] = useState<string>("golfBall");
 
-
   function toggleButtonClicked(problemType: string){
     
     setCurrentButtonClicked(problemType);
 
   } 
-
 
   return (
     <section id="calculator" className="calculator-section">

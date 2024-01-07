@@ -3,24 +3,8 @@ import CalculatorInput from "./calculatorComponents/CalculatorInput";
 import CalculatorOutput from "./calculatorComponents/CalculatorOutput";
 import { useEffect, useState } from "react";
 
-interface Output {
-  initialHorizontalVelocity?: number;
-  initialVerticalVelocity?: number;
-  flightTime?: number;
-  horizontalDisplacement?: number;
-  maxHeight?: number;
-  totalFallTime? : number;
-  totalHorizontalDisplacement?: number;
-  totalVerticalDisplacement?: number;
-  trueFinalVelocity?: number;
-  angleAtFinalVelocity?: number;
-}
+import type {Output, FormDataType} from "../Types/types"
 
-type FormDataType = {
-  angle?: number;
-  initialSpeed?: number;
-  height?: number;
-};
 
 export default function Calculator({problemType}: {problemType: string}){
 
