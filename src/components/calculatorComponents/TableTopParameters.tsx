@@ -75,7 +75,6 @@ export default function GolfBallParameters({onFormSubmit, cleanUp}: {onFormSubmi
             <div className="calculator-parameter-type-wrapper">
               <select name="parameter-type">
                 <option value="meters" >m</option>
-                <option value="feet">ft</option>
               </select>
             </div>
           </div>
@@ -94,7 +93,6 @@ export default function GolfBallParameters({onFormSubmit, cleanUp}: {onFormSubmi
               <div className="calculator-parameter-type-wrapper">
                 <select name="parameter-type">
                   <option value="m/s" title="m/s">m/s</option>
-                  <option value="ft/s">ft/s</option>
                 </select>
               </div>
             </div>

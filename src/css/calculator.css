@@ -1,5 +1,4 @@
 .calculator-section{
-  /* border: 1px solid white; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,7 +9,6 @@
 .calculator-wrapper{
   height: 90%;
   width: 90%;
-  /* border: 2px solid rgb(54, 123, 36); */
 }
 
 
@@ -29,7 +27,6 @@
  display: flex;
  align-items: center;
  transition: 0.2s ease-in;;
- /* border: 1px solid yellow; */
 }
 
 .problem-type-buttons button{
@@ -73,7 +70,6 @@
 }
 
 .problem-type-buttons-wrapper{
-  /* border: 1px solid white; */
   height: 10%;
   display: flex;
   align-items: center;
@@ -84,7 +80,6 @@
   height: 89%;
   width: 100%;
   display: flex;
-  /* border: 4px solid rgb(220, 146, 146); */
   justify-content: space-between ;
 }
 
@@ -94,7 +89,6 @@
   align-items: center;
   height: 100%;
   width: 45%;
-  /* border: 1px solid green; */
   justify-content: center;
 }
 
@@ -102,7 +96,6 @@
 .calculator-output-wrapper,
 .calculator-input-form
 {
-  /* border: 1px solid blue; */
   height: 80%;
   width: 80%;
   display: flex;
@@ -112,7 +105,6 @@
 }
 
 .calculator-parameter{
-  /* border: 1px solid yellow; */
   width: 100%;
   height: 100%;
   display: flex;
@@ -125,19 +117,16 @@
   flex-direction: column;
   width: 100%;
   height: 10%;
-  /* border: 4px solid gray; */
 }
 
 .calculator-parameter-label-input{
   display: flex;
-  /* border: 2px solid blue; */
   height: 100%;
   align-items: center;
   flex: 1;
 }
 
 .calculator-parameter-label{
-  /* border: 1px solid red; */
   width: 25%;
   height: 100%;
   display: flex;
@@ -145,13 +134,12 @@
 }
 
 .calculator-parameter-input{
-  /* border: 1px solid green; */
   background: none;
   color: white;
   height: 100%;
   outline: none;
-  width: 70%;
-  font-size: 1.5rem;
+  width: 75%;
+  font-size: 1rem;
   text-align: right;
   border: none;
 
@@ -165,7 +153,6 @@
   height: 100%;
   width: 25%;
   padding-left: 1rem;
-    /* border: 1px solid white; */
 }
 
 .calculator-parameter-type-wrapper select {
@@ -186,7 +173,6 @@
 }
 
 .calculator-output-parameter-wrapper{
-  /* border: 1px solid red; */
   border-bottom: 1px solid #009e77;
   display: flex;
   flex-direction: column;
@@ -197,7 +183,6 @@
 .calculator-output-title{
   font-size: .8rem;
   font-weight: 400;
-  /* color: rgb(202, 202, 202); */
 }
 
 .calculator-output-parameter{
