@@ -2,36 +2,15 @@ import "../css/calculator.css";
 import CalculatorInput from "./calculatorComponents/CalculatorInput";
 import CalculatorOutput from "./calculatorComponents/CalculatorOutput";
 import { useEffect, useState } from "react";
-import dotenv from "dotenv";
 
-dotenv.config();
+import type {Output, FormDataType} from "../Types/types"
 
-type onFormSubmitType = (formData: string) => void;
-
-interface Output {
-  initialHorizontalVelocity?: number;
-  initialVerticalVelocity?: number;
-  flightTime?: number;
-  horizontalDisplacement?: number;
-  maxHeight?: number;
-  totalFallTime? : number;
-  totalHorizontalDisplacement?: number;
-  totalVerticalDisplacement?: number;
-  trueFinalVelocity?: number;
-  angleAtFinalVelocity?: number;
-}
-
-type FormDataType = {
-  angle?: number;
-  initialSpeed?: number;
-  height?: number;
-};
 
 export default function Calculator({problemType}: {problemType: string}){
 
   const [calculations, setCalculations] = useState<Output | null>(null);
 
-  const API_LINK: string = import.meta.env.API_LINK;
+  const VITE_APP_BUILD_ENV: string = import.meta.env.VITE_APP_BUILD_ENV;
 
   useEffect(() => {
     cleanUp();
@@ -54,7 +33,7 @@ export default function Calculator({problemType}: {problemType: string}){
         ...formData, 
         problemType: problemType,
       }
-      console.log("FINAL FORM DATA: ", finalFormData)
+
       const JSONFormData = JSON.stringify(finalFormData);
       const options = {
         method: "POST",
@@ -64,7 +43,7 @@ export default function Calculator({problemType}: {problemType: string}){
         body: JSONFormData
       }
 
-      const calculations = await fetch(API_LINK, options);
+      const calculations = await fetch(VITE_APP_BUILD_ENV, options);
 
       const readableCalculations = await calculations.json();
 

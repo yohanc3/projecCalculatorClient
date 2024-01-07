@@ -1,26 +1,13 @@
 import "../../css/calculator.css";
-import {useForm, SubmitHandler} from "react-hook-form";
-import { ChangeEvent, useEffect, useState } from "react";
+import {useForm} from "react-hook-form";
+import { useEffect, useState } from "react";
 
 import {useDebounce} from "usehooks-ts";
 
-type FormDataType = {
-  angle?: number;
-  initialSpeed?: number;
-  height?: number;
-};
-
-type FormErrorsType = {
-  angle: boolean;
-  initialSpeed: boolean;
-}
-
-type cleanUp = () => void;
-
-type onFormSubmitType = (formData: FormDataType) => void;
+import type {OnFormSubmitType, CleanUp, FormDataType, FormErrorsType} from "../../Types/types"
 
 
-export default function GolfBallParameters({onFormSubmit, cleanUp}: {onFormSubmit: onFormSubmitType, cleanUp: cleanUp}){
+export default function GolfBallParameters({onFormSubmit, cleanUp}: {onFormSubmit: OnFormSubmitType, cleanUp: CleanUp}){
 
   const {register, handleSubmit} = useForm<FormDataType>();
 
@@ -57,9 +44,6 @@ export default function GolfBallParameters({onFormSubmit, cleanUp}: {onFormSubmi
   function autoSetFormErrors(formInputs: FormDataType){
     const newFormErrors: FormErrorsType = {angle: !!formInputs.angle, initialSpeed: !!formInputs.initialSpeed};
     setFormErrors(newFormErrors);
-    // console.log("formInputs: ", formInputs)
-    // console.log("newFormErrors: ",  newFormErrors);
-    // console.log("are there not errors?: ", !Object.values(newFormErrors).some((error) => (!!error) === false));
     return !Object.values(newFormErrors).some((error) => (!!error) === false)
   }
 
@@ -78,7 +62,6 @@ export default function GolfBallParameters({onFormSubmit, cleanUp}: {onFormSubmi
             <div className="calculator-parameter-type-wrapper">
               <select name="parameter-type">
                 <option value="degrees" title="deg (degrees)">deg</option>
-                <option value="radians">rad</option>
               </select>
             </div>
           </div>
@@ -97,7 +80,6 @@ export default function GolfBallParameters({onFormSubmit, cleanUp}: {onFormSubmi
               <div className="calculator-parameter-type-wrapper">
                 <select name="parameter-type">
                   <option value="m/s" title="m/s">m/s</option>
-                  <option value="ft/s">ft/s</option>
                 </select>
               </div>
             </div>
