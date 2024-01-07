@@ -12,7 +12,6 @@ type FormDataType = {
 
 type cleanUp = () => void;
 
-
 export default function CalculatorInput({onFormSubmit, problemType, cleanUp}: {onFormSubmit: onFormSubmitType, problemType: string, cleanUp: cleanUp}){
 
   if(problemType === "golfBall"){
